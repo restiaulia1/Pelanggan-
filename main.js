@@ -23,6 +23,10 @@ const firebaseConfig = {
   measurementId: "G-TJFSY9D8R1"
 };
 
+// Inisialisasi firebase
+const aplikasi = initializeApp(firebaseConfig)
+const basisdata = getFirestore(aplikasi)
+
 export async function ambilDaftarPelanggan() {
   const refDokumen = collection(basisdata, "pelanggan");
   const kueri = query(refDokumen, orderBy("nama"));
