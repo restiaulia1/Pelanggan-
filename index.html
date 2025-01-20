@@ -35,6 +35,9 @@
     <tbody>
     </tbody>
   </table>
+  
+  <p id="jumlah">jumlah pelanggan</p>
+  
 
   <a href="formtambah.html">tambah Pelanggan </a>
   
@@ -47,6 +50,7 @@
       
       
        let nomor = 1
+       let total = 0
       daftarPelanggan.forEach((data) => {
         elemenDaftarPelanggan.append(
           "<tr>" +
@@ -58,6 +62,8 @@
           "</tr>"
         )
         nomor = nomor + 1
+        
+        $('#jumlah').html('jumlah pelanggan : ' + (nomor -1))
       })
      
       
